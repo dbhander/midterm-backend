@@ -3,6 +3,10 @@ name: Docker Image CI/CD
 on:
   push:
     branches: [main]
+
+permissions:
+  packages: write
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
