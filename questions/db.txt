@@ -1,0 +1,3 @@
+1,Which word matches the image?,bear|lion|elephant,elephant,default-image.jpg
+2,Which word matches the image?,bear|tiger|leopard,leopard,default-image.jpg
+3,Which word matches the image?,tiger|lion|leopard,lion,default-image.jpg
