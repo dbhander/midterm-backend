@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public record Quiz(
         int id,
         String title,
-        List<Integer> questionIds  // Remove questions field
+        List<Integer> questionIds
 ) {
     public String toLine() {
         return String.format("%d,%s,%s",

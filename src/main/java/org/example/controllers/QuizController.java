@@ -42,7 +42,6 @@ public class QuizController {
             Quiz quiz = quizRepository.findById(id);
             if (quiz == null) return ResponseEntity.notFound().build();
 
-            // Maintain question order from questionIds
             List<Question> orderedQuestions = new ArrayList<>();
             for (Integer qId : quiz.questionIds()) {
                 Question q = questionRepository.findById(qId);
@@ -78,7 +77,6 @@ public class QuizController {
             Quiz existing = quizRepository.findById(id);
             if (existing == null) return ResponseEntity.notFound().build();
 
-            // Merge existing data with updates
             String newTitle = updateRequest.title() != null ?
                     updateRequest.title() : existing.title();
             List<Integer> newQuestionIds = updateRequest.questionIds() != null ?

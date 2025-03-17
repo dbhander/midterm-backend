@@ -36,7 +36,7 @@ public class QuizRepository {
                 quiz.questionIds()
         );
         Path path = Paths.get(DB_FILE);
-        appendToFile(path, newQuiz.toLine() + NEW_LINE);  // Use parameterless toLine()
+        appendToFile(path, newQuiz.toLine() + NEW_LINE);
         return newId;
     }
 
@@ -46,7 +46,7 @@ public class QuizRepository {
 
         return Files.readAllLines(path).stream()
                 .filter(line -> !line.trim().isEmpty())
-                .filter(line -> line.split(",", -1).length >= 3) // Validate field count
+                .filter(line -> line.split(",", -1).length >= 3)
                 .map(Quiz::fromLine)
                 .filter(quiz -> quiz != null)
                 .toList();
