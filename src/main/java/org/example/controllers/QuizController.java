@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-@CrossOrigin(origins = "https://dbhander.github.io/midterm-frontend/")
+@CrossOrigin(origins = "https://dbhander.github.io/")
 @RestController
 @RequestMapping("/quizzes")
 public class QuizController {
